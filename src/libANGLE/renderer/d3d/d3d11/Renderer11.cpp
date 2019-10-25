@@ -724,10 +724,10 @@ egl::Error Renderer11::initializeD3DDevice()
 
     if (!mCreatedWithDeviceEXT)
     {
+        PFN_D3D11ON12_CREATE_DEVICE D3D11on12CreateDevice = nullptr;
 #if !defined(ANGLE_ENABLE_WINDOWS_UWP)
         PFN_D3D11_CREATE_DEVICE D3D11CreateDevice         = nullptr;
         PFN_D3D12_CREATE_DEVICE D3D12CreateDevice         = nullptr;
-        PFN_D3D11ON12_CREATE_DEVICE D3D11on12CreateDevice = nullptr;
         {
             ANGLE_TRACE_EVENT0("gpu.angle", "Renderer11::initialize (Load DLLs)");
             mDxgiModule  = LoadLibrary(TEXT("dxgi.dll"));
