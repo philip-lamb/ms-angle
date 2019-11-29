@@ -1091,7 +1091,11 @@ foreach(is_shared_library,
   }
 
   target(library_type, library_name) {
-    sources = util_sources
+    if (!angle_is_winuwp) {
+      sources = util_sources
+    } else {
+      sources = []
+    }
     deps = [
       ":angle_common",
       ":angle_util_loader_headers",
