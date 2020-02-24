@@ -987,7 +987,7 @@ angle_executable("angle_shader_translator") {
   deps = [ ":translator" ]
 }
 
-if (angle_has_build) {
+if (angle_has_build && !angle_is_winuwp) {
   config("angle_feature_support_config") {
     include_dirs = [
       "include",
