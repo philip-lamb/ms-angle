@@ -31,24 +31,11 @@ Targets Universal Windows 10 apps (UWP). See 'ANGLE.WindowsStore' for non-ARM64 
       <file src="..\out\$configuration$-arm64\libGLESv2.dll.lib" target="bin\UAP\ARM64\libGLESv2.lib" />
 
       <!-- Headers -->
-      <file src="..\include\GLES2\gl2.h" target="include\GLES2" />
-      <file src="..\include\GLES2\gl2ext.h" target="include\GLES2" />
-      <file src="..\include\GLES2\gl2ext_angle.h" target="include\GLES2" />
-      <file src="..\include\GLES2\gl2ext_explicit_context_autogen.inc" target="include\GLES2" />
-      <file src="..\include\GLES2\gl2platform.h" target="include\GLES2" />
-      <file src="..\include\GLES3\gl3.h" target="include\GLES3" />
-      <file src="..\include\GLES3\gl3ext_explicit_context_autogen.inc" target="include\GLES3" />
-      <file src="..\include\GLES3\gl3platform.h" target="include\GLES3" />
-      <file src="..\include\GLES3\gl31.h" target="include\GLES3" />
-      <file src="..\include\GLES3\gl31ext_explicit_context_autogen.inc" target="include\GLES3" />
-      <file src="..\include\GLES3\gl32.h" target="include\GLES3" />
-      <file src="..\include\GLES3\gl32ext_explicit_context_autogen.inc" target="include\GLES3" />
-      <file src="..\include\EGL\egl.h" target="include\EGL" />
-      <file src="..\include\EGL\eglext.h" target="include\EGL" />
-      <file src="..\include\EGL\eglext_angle.h" target="include\EGL" />
-      <file src="..\include\EGL\eglplatform.h" target="include\EGL" />
-      <file src="..\include\KHR\khrplatform.h" target="include\KHR" />
-      <file src="..\include\angle_windowsstore.h" target="include" />
+      <file src="..\include\**\*.h" target="include" />
+      <file src="..\include\**\*.inc" target="include" />
+
+      <!-- Source files -->
+      <file src="..\src\**\*.cpp" target="src" />
 
       <!-- Build scripts -->
       <file src="ANGLE.WindowsStore.Servo.targets" target="build\native" />
