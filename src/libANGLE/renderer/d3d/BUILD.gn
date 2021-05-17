@@ -310,7 +310,7 @@ if (angle_enable_d3d9) {
 
 if (angle_enable_d3d11) {
   config("angle_d3d11_backend_config") {
-    defines = [ "ANGLE_ENABLE_D3D11"", "ANGLE_ENABLE_KEYEDMUTEX", "ANGLE_SKIP_DXGI_1_2_CHECK" ]
+    defines = [ "ANGLE_ENABLE_D3D11", "ANGLE_ENABLE_KEYEDMUTEX", "ANGLE_SKIP_DXGI_1_2_CHECK" ]
   }
 
   angle_source_set("angle_d3d11_backend") {
